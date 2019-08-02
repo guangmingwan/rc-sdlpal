@@ -634,36 +634,36 @@ PAL_JoystickEventFilter(
       //
       // Pressed the joystick button
       //
-      switch (lpEvent->jbutton.button & 1)
+      switch (lpEvent->jbutton.button)
       {
-      case 0://a
-         g_InputState.dwKeyPress |= kKeyMenu; //菜单
-         break;
-      case 1://b
+      case 1://a
          g_InputState.dwKeyPress |= kKeySearch; //探索(对话)
          break;
-      case 2://x
+      case 2://b
+         g_InputState.dwKeyPress |= kKeyMenu; //菜单
+         break;
+      case 0://x
          g_InputState.dwKeyPress |= kKeyUseItem; //使用
          break;
       case 3://y
          g_InputState.dwKeyPress |= kKeyThrowItem; //投掷
          break;
-      case 4://select
+      case 8://select
          g_InputState.dwKeyPress |= kKeyStatus; //状态
          break;
-      case 5://start
+      case 9://start
          g_InputState.dwKeyPress |= kKeyFlee; //逃跑
          break;
-      case 6://l1
+      case 4://l1
          g_InputState.dwKeyPress |= kKeyDefend; //防御
          break;
-      case 7://l2
+      case 5://l2
          g_InputState.dwKeyPress |= kKeyAuto; //自动
          break;
-      case 8://r1
+      case 6://r1
          g_InputState.dwKeyPress |= kKeyRepeat; //重复
          break;
-      case 9://r2
+      case 7://r2
          g_InputState.dwKeyPress |= kKeyForce; //最强
          break;
 

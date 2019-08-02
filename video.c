@@ -312,7 +312,7 @@ VIDEO_Startup(
    }
 
 #endif
-
+	SDL_ShowCursor( SDL_DISABLE );
    return 0;
 }
 
